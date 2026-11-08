@@ -1,0 +1,49 @@
+[package]
+name = "lock-keeper"
+description = "A murder on a canal in 1923, written into a constable's notebook by lantern light."
+version = "0.1.0"
+edition = "2024"
+license = "EUPL-1.2"
+authors = ["Markus Mayer"]
+rust-version = "1.95"
+publish = false
+
+[package.metadata.ifiction]
+title = "The Lock-Keeper's Night"
+headline = "An Interactive Fiction"
+genre = "Mystery"
+language = "en"
+first-published = "2026"
+forgiveness = "Polite"
+release = 1
+cover = { path = "assets/cover.png", description = "A constable's red leather notebook on a dark desk, titled The Lock-Keeper's Night." }
+description = """
+Autumn 1923. Amos Reed, the lock-keeper, lies drowned in his own lock. You are the county constable, and the coroner comes at three.
+
+Prove means, opportunity and motive against the right person before he comes, or the death goes down as an accident."""
+
+[package.metadata.ifiction.ifid]
+executable = "BD699FAA-A17A-48DF-9DAE-DB410A1C6216"
+
+[dependencies]
+game-toolkit = "0.11.1"
+ifiction = { version = "0.2", default-features = false }
+# In flux: develop against the sibling checkout for now.
+loremaster-runtime = { path = "../loremaster/crates/loremaster-runtime" }
+loremaster-model = { path = "../loremaster/crates/loremaster-model" }
+serde_json = "1"
+bytemuck = { version = "1", features = ["derive"] }
+env_logger = "0.11"
+
+[build-dependencies]
+ifiction-build = "0.2"
+loremaster-project = { path = "../loremaster/crates/loremaster-project" }
+serde_json = "1"
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+strip = true
