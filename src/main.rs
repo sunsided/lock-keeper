@@ -1057,6 +1057,7 @@ fn main() -> Result<()> {
         }
         _ => {}
     }
+    #[cfg(not(target_arch = "wasm32"))]
     env_logger::init();
     run::<LockKeeper>(AppConfig {
         title: ifiction_meta::TITLE.into(),
@@ -1066,6 +1067,9 @@ fn main() -> Result<()> {
         scale_mode: ScaleMode::Fit,
         scale_filter: ScaleFilter::Linear,
         border_color: Color::rgb8(8, 6, 4),
+        canvas_id: Some("lock-keeper".into()),
+        // Everything is compiled in; there is no asset folder to preload.
+        web_preload: Some(Vec::new()),
         ..Default::default()
     })
 }

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta prefix="ifiction: http://babel.ifarchive.org/protocol/iFiction/" property="ifiction:ifid" content="C4C096F2-61C3-47B9-8DB6-AC698F2C42EE">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Lock-Keeper's Night</title>
+    <!-- wasm-opt rejects what current Rust emits by default unless told to accept it. -->
+    <link data-trunk rel="rust" data-bin="lock-keeper"
+      data-wasm-opt-params="--enable-bulk-memory --enable-bulk-memory-opt --enable-nontrapping-float-to-int --enable-sign-ext --enable-mutable-globals --enable-multivalue --enable-reference-types" />
+    <!-- The font licences and the game's own travel with every web build. -->
+    <link data-trunk rel="copy-file" href="assets/fonts/OFL-Caveat.txt" />
+    <link data-trunk rel="copy-file" href="assets/fonts/OFL-Newsreader.txt" />
+    <link data-trunk rel="copy-file" href="LICENSE" />
+    <style>
+      html, body { margin: 0; height: 100%; background: #080604; }
+      body { display: flex; align-items: center; justify-content: center; }
+      /* 16:9, the game's canvas. */
+      #lock-keeper {
+        outline: none;
+        width: min(100vw, calc(100vh * 16 / 9)) !important;
+        height: min(100vh, calc(100vw * 9 / 16)) !important;
+        touch-action: none;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="lock-keeper" tabindex="0"></canvas>
+  </body>
+</html>

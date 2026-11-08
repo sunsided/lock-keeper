@@ -1,0 +1,13 @@
+[build]
+target = "index.html"
+dist = "dist"
+# Relative URLs so the build works from any sub-path (GitHub Pages, the games site).
+public_url = "./"
+# Stable file names (lock-keeper.js / lock-keeper_bg.wasm) so a host page can import them.
+filehash = false
+
+[serve]
+port = 8080
+
+[watch]
+ignore = ["target", "dist", "docs"]

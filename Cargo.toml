@@ -27,6 +27,7 @@ Prove means, opportunity and motive against the right person before he comes, or
 
 [package.metadata.ifiction.ifid]
 executable = "BD699FAA-A17A-48DF-9DAE-DB410A1C6216"
+html = "C4C096F2-61C3-47B9-8DB6-AC698F2C42EE"
 
 [dependencies]
 game-toolkit = "0.11.1"
@@ -36,6 +37,9 @@ loremaster-runtime = { git = "https://github.com/sunsided/loremaster", rev = "61
 loremaster-model = { git = "https://github.com/sunsided/loremaster", rev = "6113e866ddb7d8ac1af06eb2a317eb5673b6913f" }
 serde_json = "1"
 bytemuck = { version = "1", features = ["derive"] }
+
+# On the web the toolkit logs to the browser console itself.
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 env_logger = "0.11"
 
 [build-dependencies]

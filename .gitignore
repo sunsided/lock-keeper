@@ -1,2 +1,4 @@
 target/
 .task/
+dist/
+.playwright-mcp/

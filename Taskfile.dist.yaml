@@ -61,6 +61,16 @@ tasks:
       - '{{.IFICTION}} ifid target/release/lock-keeper'
       - '{{.IFICTION}} lint target/release/lock-keeper'
 
+  web:
+    desc: Serve the browser build with live rebuild at http://localhost:8080 (needs trunk)
+    cmds:
+      - trunk serve
+
+  web:build:
+    desc: Build for the browser into dist/ (PROFILE=release for upload)
+    cmds:
+      - trunk build {{.PROFILE_FLAG}} --locked
+
   fonts:
     desc: 'Rebake assets/fonts: task fonts -- CAVEAT_FILES_DIR NEWSREADER_FILES_DIR'
     cmds:

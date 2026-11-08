@@ -60,7 +60,7 @@ fn coverage(c: vec3<f32>) -> f32 {
 @fragment
 fn fs_main(in: VsOut) -> @location(0) vec4<f32> {
     let p = in.uv * post.size;
-    let dry = textureSample(input_tex, nearest_sampler, in.uv);
+    let dry = textureSample(input_tex, linear_sampler, in.uv);
     let page = box_mask(p, BOOK, 6.0);
     if page <= 0.0 {
         return dry;
