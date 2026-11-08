@@ -1,0 +1,12 @@
+quest: true
+title: "Opportunity: who was on the gate"
+start: open
+states:
+  - { name: open, journal: "Marsh says he never left the parlour. Who was on the gate at ten past nine?" }
+  - { name: proven, journal: "Marsh was out at the lock when Amos died.", done: true }
+steps:
+  - from: open
+    on: { verb: [examine, boots] }
+    when: boots.wet
+    to: proven
+    say: "You write it in your notebook: Marsh was out in the wet."

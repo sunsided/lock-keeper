@@ -1,0 +1,8 @@
+name: Lock Side
+position: [1, -1]
+description:
+  - "The lock gates stand black against the sky, and a gangplank leads east to a barge. {lock == full ? Black water fills the chamber to the brim. | }{lock == emptying ? The water falls fast and the walls shine wet. | }{lock == empty ? The chamber is empty. Wet ladder rungs go down into the dark. | }"
+exits:
+  - { direction: south, to: towpath }
+  - { direction: east, to: barge_cabin }
+  - { direction: down, to: lock_bottom, visible: lock == empty }

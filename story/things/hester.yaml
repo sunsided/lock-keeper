@@ -1,0 +1,8 @@
+name: Hester Reed
+aliases: [hester, daughter, girl]
+proper: true
+location: { room: kitchen }
+presence:
+  - "Hester Reed, Amos's daughter, is here."
+description:
+  - "She has been crying, and she does not want you to see it."

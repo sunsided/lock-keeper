@@ -1,0 +1,21 @@
+quest: true
+title: "Motive: why Amos had to die"
+start: open
+states:
+  - { name: open, journal: "Why would anyone kill a lock-keeper?" }
+  - { name: weak, journal: "Amos found something wrong in the toll ledger. The proof is still missing." }
+  - { name: strong, journal: "The true ledger pages: Marsh stole the tolls.", done: true }
+steps:
+  - from: open
+    on: { verb: [examine, notebook] }
+    to: weak
+    say: "You write it in your notebook: the ledger, and \"M\"."
+  - from: open
+    on: { verb: [examine, stove] }
+    when: stove.ash
+    to: weak
+    say: "You write it in your notebook: someone burned the company's paper."
+  - from: [open, weak]
+    on: { verb: [take, pages] }
+    to: strong
+    say: "You write it in your notebook: the true pages."

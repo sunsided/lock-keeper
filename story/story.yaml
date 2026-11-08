@@ -1,0 +1,24 @@
+# The Lock-Keeper's Night: the full demo (P4-07, #84), steps 1 to 7 of the
+# design "The Lock-Keeper's Night". Read ../README.md for how to play it.
+title: The Lock-Keeper's Night
+author: loremaster demo
+start: towpath
+seed: 11
+
+intro:
+  - "Autumn 1923. At half past nine they found Amos Reed, the lock-keeper, drowned in his own lock. It looks like a fall from the gate in the dark. You are the county constable. The coroner comes at three. By then you need a case, or it goes down as an accident."
+
+# A turn is a quarter of an hour, not the five minutes of the design, and
+# the coroner comes at three, not at four: the ending checks walk every
+# state of the night, and 72 turns are too many for them. Read
+# ../README.md, "The demo", for what changed from the design and why.
+clock:
+  start: "22:00"
+  minutes_per_turn: 15
+  phases:
+    - { name: night, from: "21:00" }
+
+vars:
+  - { id: marsh_has_pages, type: bool, initial: false }
+  - { id: bert_asleep, type: bool, initial: false }
+  - { id: crane_asleep, type: bool, initial: false }

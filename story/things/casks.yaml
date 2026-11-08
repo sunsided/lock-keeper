@@ -1,0 +1,7 @@
+# Crane's secret, the red herring of the design: a strong motive and a true alibi.
+name: casks
+aliases: [cask, spirits, brandy, tarpaulin, tarp]
+location: { room: barge_cabin }
+listed: false
+description:
+  - "Six small casks of brandy under a tarpaulin, with no duty stamp. Amos would have known."

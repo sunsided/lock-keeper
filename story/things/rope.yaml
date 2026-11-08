@@ -1,0 +1,5 @@
+name: coil of rope
+aliases: [rope, coil]
+location: { in: chest }
+description:
+  - "Tarred rope, coiled tight. Something hard is under it."

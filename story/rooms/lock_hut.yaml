@@ -1,0 +1,6 @@
+name: Lock Hut
+position: [1, 1]
+description:
+  - "A brick hut for the lock hands. Oilskins on a nail, a tool chest under the window."
+exits:
+  - { direction: north, to: towpath }

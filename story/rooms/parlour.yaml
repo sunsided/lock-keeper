@@ -1,0 +1,6 @@
+name: Parlour
+position: [-1, 0]
+description:
+  - "A cold best room. The company's toll ledger lies open on the table under the lamp."
+exits:
+  - { direction: east, to: kitchen }

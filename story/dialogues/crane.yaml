@@ -1,0 +1,22 @@
+with: crane
+start: [asleep, meet]
+nodes:
+  asleep:
+    when: crane_asleep
+    say: "Crane snores in his bunk. There is no waking him."
+  meet:
+    say: [{ says: "Constable. I wait for the dawn and the lock, same as every man here." }]
+    options:
+      - say: [{ says: "I need to empty the lock. Have you a windlass?" }]
+        when: not carried(crane_windlass)
+        go: windlass
+      - say: [{ says: "What is under the tarpaulin?" }]
+        go: cargo
+      - say: [{ says: "Good night." }]
+        go: end
+  windlass:
+    say: [{ says: "Take the spare. Bring it back." }]
+    then:
+      - move: { crane_windlass: carried }
+  cargo:
+    say: [{ says: "Brandy. Amos knew, and he said nothing for a bottle at Christmas. I did not kill him for it." }]

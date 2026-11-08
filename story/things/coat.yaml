@@ -1,0 +1,7 @@
+name: coat
+aliases: [pocket, greatcoat]
+location: { room: amos_room }
+listed: false
+container: true
+description:
+  - "Amos's work coat, still damp. Something square sits in the inside pocket."

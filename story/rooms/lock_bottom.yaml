@@ -1,0 +1,6 @@
+name: Lock Bottom
+position: [1, -2]
+description:
+  - "Mud and weed at the bottom of the empty chamber. The walls rise wet on all sides."
+exits:
+  - { direction: up, to: lock_side }

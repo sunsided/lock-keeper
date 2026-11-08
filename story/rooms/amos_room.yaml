@@ -1,0 +1,7 @@
+name: Amos's Room
+position: [0, -1]
+description:
+  - "Amos Reed lies on his bed under a sheet, where they carried him. His coat hangs on the door. Hester's room is west."
+exits:
+  - { direction: down, to: kitchen }
+  - { direction: west, to: hester_room }

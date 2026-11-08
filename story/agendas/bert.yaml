@@ -1,0 +1,14 @@
+# Bert Pike walks the towpath with his lantern, then sleeps in the hut.
+actor: bert
+steps:
+  - { id: rounds, at: "22:30", place: towpath }
+  - { id: hut, at: "23:00", place: lock_hut }
+  - id: sleep
+    at: "00:30"
+    place: lock_hut
+    then:
+      - set: { bert_asleep: true }
+    # Marsh cleans his boots at eleven, and Bert is the other witness.
+    # Asleep, he cannot tell of the second lantern.
+    closes: [committed, charged]
+    reason: "Bert sleeps from half past twelve. A player who has not proven the opportunity by then can no longer charge Marsh."

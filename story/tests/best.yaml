@@ -1,0 +1,68 @@
+# The best path (design: best.yaml): the boots before eleven, the pages
+# before Marsh goes to the lock at one, the weapon, then accuse Marsh.
+# The steps with an `id` give the hint ladder and the dependency chart.
+name: Committed for trial
+steps:
+  - w
+  - id: boots
+    do: examine boots
+    at: kitchen
+    see: "wet to the ankle"
+    facts: { opportunity: proven }
+    hints:
+      - "One man here says he never left the house all evening. Look at what he wore."
+      - "Something by the stove is still wet. It will not stay wet for long."
+  - e
+  - n
+  - e
+  - id: crane
+    do: talk to crane
+    at: barge_cabin
+    hints:
+      - "Amos kept the lock busy. What lies at the bottom, under the water?"
+      - "Only a windlass lets the water out, and the barge has one."
+  - { do: "1", see: "Take the spare." }
+  - w
+  - id: drain
+    do: open lower paddles
+    at: lock_side
+    needs: [crane]
+    facts: { lock: emptying }
+    hints:
+      - "With a windlass you can let the water out of the chamber."
+      - "Open the lower paddles and let the chamber run dry, before someone else comes to the lock at one."
+  - wait
+  - { do: wait, see: "The chamber is empty." }
+  - down
+  - id: pages
+    do: take pages
+    at: lock_bottom
+    needs: [drain]
+    facts: { motive: strong }
+    hints:
+      - "Amos hid something where only an empty lock would show it."
+      - "Look in the gear housing at the foot of the gate."
+  - up
+  - s
+  - s
+  - id: weapon
+    do: search chest
+    at: lock_hut
+    see: "You find a windlass."
+    facts: { means: proven }
+    hints:
+      - "The wound above his ear was made by something heavy and iron."
+      - "The lock hands keep their tools in a chest. Look under what fills it."
+  - n
+  - w
+  - id: accuse
+    do: accuse marsh
+    at: kitchen
+    needs: [boots, pages, weapon]
+    see: "Committed for trial"
+    hints:
+      - "You have the means, the chance and the motive. Who had all three?"
+expect:
+  ending: committed
+  ended: true
+  not_see: "burning paper"

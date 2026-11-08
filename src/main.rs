@@ -864,6 +864,10 @@ impl Game for LockKeeper {
         let WindowEvent::KeyboardInput { event, .. } = e else {
             return false;
         };
+        // A screenshot run plays its own commands.
+        if self.shot.is_some() {
+            return true;
+        }
         if event.state != ElementState::Pressed {
             return false;
         }

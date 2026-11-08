@@ -1,0 +1,11 @@
+name: stove
+aliases: [iron stove, grate, ash]
+location: { room: kitchen }
+listed: false
+props: { ash: false }
+description:
+  - pick: best
+    one_of:
+      - "The stove ticks as it cools. Nothing in it but coal."
+      - when: stove.ash
+        text: "Fresh ash on the grate. One scrap did not burn: a corner with half of the company's stamp."

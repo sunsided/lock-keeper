@@ -1,0 +1,5 @@
+with: marsh
+start: [meet]
+nodes:
+  meet:
+    say: [{ says: "A dreadful accident. I was here with the ledger all evening, constable." }]

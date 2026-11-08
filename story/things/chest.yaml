@@ -1,0 +1,7 @@
+name: tool chest
+aliases: [chest, tools]
+location: { room: lock_hut }
+listed: false
+container: true
+description:
+  - "A wooden chest of lock tools. A coil of rope fills most of it."

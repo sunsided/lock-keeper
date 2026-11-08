@@ -1,0 +1,7 @@
+# Crane gives it in his dialogue. The windlass in the tool chest is evidence.
+name: spare crank
+aliases: [crank, spare, spare windlass]
+location: nowhere
+portable: true
+description:
+  - "Crane's spare windlass, clean and well oiled."

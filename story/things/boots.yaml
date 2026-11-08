@@ -1,0 +1,8 @@
+name: pair of boots
+aliases: [boots, wet boots, marsh's boots]
+location: { room: kitchen }
+props: { wet: true }
+presence:
+  - "{boots.wet ? A pair of town boots dries by the stove. | A pair of town boots stands by the stove, clean.}"
+description:
+  - "{boots.wet ? Town boots, wet to the ankle, with canal mud in the welts. Marsh said he never left the parlour. | Town boots, freshly cleaned and blacked.}"

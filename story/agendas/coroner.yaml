@@ -1,0 +1,26 @@
+# The coroner comes at three and reads the constable's notebook: the case
+# that the player has then gives the ending.
+actor: coroner
+steps:
+  - id: committed
+    at: "03:00"
+    when: means == proven and opportunity == proven and motive == strong and carried(pages)
+    then:
+      - say: "The coroner's trap stops on the towpath. He reads your notebook and the true pages, and sends for the county."
+      - end: committed
+  - id: charged
+    at: "03:00"
+    when: means == proven and opportunity == proven and (motive == weak or (motive == strong and not carried(pages)))
+    then:
+      - say: "The coroner's trap stops on the towpath. He reads your notebook, frowns, and sends for the county."
+      - end: charged
+  - id: accident
+    at: "03:00"
+    then:
+      - say: "The coroner's trap stops on the towpath. He reads your notebook, and shakes his head."
+      - end: accident
+    # The night ends here: a case that is not whole by three is lost, and
+    # so is an accusation that comes too late. The steps of Marsh and Bert
+    # close the case earlier, for their own reasons.
+    closes: [committed, charged, released, wrong_man]
+    reason: "The coroner comes at three: what the notebook holds then is the case, and nobody can be accused after it."

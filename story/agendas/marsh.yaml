@@ -1,0 +1,38 @@
+# Ivo Marsh, the murderer, with the times of the design.
+actor: marsh
+steps:
+  - id: boots
+    at: "23:00"
+    place: kitchen
+    then:
+      - set: { boots.wet: false }
+      - say: "{in(kitchen) ? Marsh cleans a pair of boots by the stove, quickly, and does not look at you. | }"
+  - id: parlour
+    at: "23:30"
+    place: parlour
+  # He walks to the lock when the step is due, so the pages are safe only
+  # if the player takes them before he gets there.
+  - id: lock
+    at: "01:00"
+    place: lock_side
+    when: in(pages, gear_housing)
+    then:
+      - set: { lock: empty, marsh_has_pages: true }
+      - move: { pages: nowhere }
+      - cancel: lock_drain
+      - say:
+          - narrate: "Marsh opens the lower paddles with a windlass from his coat, climbs down into the empty chamber and comes back with an oilcloth packet."
+            when: in(lock_side)
+          - narrate: "Marsh climbs down the ladder, pushes past you to the gear housing and takes an oilcloth packet from it. He is back up the rungs before you can stop him."
+            when: in(lock_bottom)
+          - narrate: "Far off, water roars at the lock."
+            when: not in(lock_side) and not in(lock_bottom)
+    closes: [committed]
+    reason: "Marsh takes the true pages from the gear housing. A late player can still charge him, with a weaker case."
+  - id: burn
+    at: "01:30"
+    place: kitchen
+    when: marsh_has_pages
+    then:
+      - set: { stove.ash: true, marsh_has_pages: false }
+      - say: "{in(kitchen) ? Marsh feeds an oilcloth packet into the stove. | You smell burning paper from the cottage.}"

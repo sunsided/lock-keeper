@@ -1,0 +1,8 @@
+name: Kitchen
+position: [0, 0]
+description:
+  - "The cottage kitchen, low and warm, with a black iron stove. The door to the towpath is east, the parlour west, the stairs go up."
+exits:
+  - { direction: east, to: towpath }
+  - { direction: west, to: parlour }
+  - { direction: up, to: amos_room }

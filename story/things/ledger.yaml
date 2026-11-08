@@ -1,0 +1,6 @@
+name: toll ledger
+aliases: [ledger, toll book]
+location: { room: parlour }
+listed: false
+description:
+  - "The company's toll ledger. Pages 41 to 44 are cut out close to the spine."

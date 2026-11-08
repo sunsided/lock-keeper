@@ -1,0 +1,6 @@
+name: Barge Cabin
+position: [2, -1]
+description:
+  - "The cabin of the *Kestrel*: a bunk, a stove the size of a hatbox, the smell of coal and wet rope. A tarpaulin covers something in the corner."
+exits:
+  - { direction: west, to: lock_side }

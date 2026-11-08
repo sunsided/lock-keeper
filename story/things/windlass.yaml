@@ -1,0 +1,7 @@
+# The murder windlass: concealed in the chest, under the rope (WO-2).
+name: windlass
+aliases: [handle, iron handle]
+location: { in: chest }
+props: { concealed: true }
+description:
+  - "An iron windlass. The square socket is dented, and a grey hair is caught in the dent."

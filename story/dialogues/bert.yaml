@@ -1,0 +1,28 @@
+with: bert
+start: [asleep, meet]
+nodes:
+  asleep:
+    when: bert_asleep
+    say: "Bert sleeps on his bench and does not wake."
+  meet:
+    say: [{ says: "Evening, sir. A bad night for it." }]
+    options:
+      - say: [{ says: "Mr Reed was a good man." }]
+        go: good_man
+      - say: [{ says: "What did you see on the gate tonight?" }]
+        go: rounds
+      - say: [{ says: "Good night, Bert." }]
+        go: end
+  good_man:
+    say: [{ says: "He was, sir. The best there is." }, { narrate: "Bert looks up at you for the first time." }]
+    options:
+      - say: [{ says: "What did you see on the gate tonight?" }]
+        when: opportunity == open
+        go: lanterns
+      - say: [{ says: "Good night, Bert." }]
+        go: end
+  rounds:
+    say: [{ says: "I carry a lantern on my rounds, sir. Nothing more." }]
+  lanterns:
+    say: [{ says: "There was two lights on the gate, sir, at a quarter past nine. Two. Then one." }]
+    set: { opportunity: proven }

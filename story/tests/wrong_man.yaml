@@ -1,0 +1,13 @@
+# The red herring (design: wrong_man.yaml): Crane has the best motive and a
+# true alibi. Find the brandy and accuse him.
+name: The wrong person
+steps:
+  - n
+  - e
+  - { do: examine casks, see: "no duty stamp" }
+  - { do: talk to crane, see: "I wait for the dawn" }
+  - { do: "2", see: "I did not kill him for it." }
+  - { do: accuse crane, see: "The wrong person" }
+expect:
+  ending: wrong_man
+  ended: true

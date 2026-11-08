@@ -1,0 +1,8 @@
+name: Bert Pike
+aliases: [bert, pike, lock hand, hand]
+proper: true
+location: { room: lock_hut }
+presence:
+  - "Bert Pike, the lock hand, is here{bert_asleep ? , asleep on a bench | }."
+description:
+  - "A slow, loyal man with a lantern. He looks at the floor when you look at him."

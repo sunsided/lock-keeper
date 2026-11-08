@@ -1,0 +1,14 @@
+name: Towpath
+position: [1, 0]
+description:
+  - "A cinder path along the canal. The cottage door is west, the lock north, the lock hut south."
+  - layer: ambient
+    when: night
+    mode: cycle
+    variants:
+      - "Water knocks against the lock gate."
+      - "Somewhere a rope creaks."
+exits:
+  - { direction: west, to: kitchen }
+  - { direction: north, to: lock_side }
+  - { direction: south, to: lock_hut }

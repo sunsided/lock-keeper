@@ -1,0 +1,6 @@
+name: lower paddles
+aliases: [paddles, paddle, sluice, lower gate]
+location: { room: lock_side }
+listed: false
+description:
+  - "Two iron paddles in the lower gate. A windlass turns them."

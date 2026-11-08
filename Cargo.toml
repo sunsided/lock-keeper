@@ -7,6 +7,9 @@ license = "EUPL-1.2"
 authors = ["Markus Mayer"]
 rust-version = "1.95"
 publish = false
+repository = "https://github.com/sunsided/lock-keeper"
+keywords = ["interactive-fiction", "text-adventure", "game", "loremaster", "game-toolkit"]
+categories = ["games"]
 
 [package.metadata.ifiction]
 title = "The Lock-Keeper's Night"
@@ -28,16 +31,16 @@ executable = "BD699FAA-A17A-48DF-9DAE-DB410A1C6216"
 [dependencies]
 game-toolkit = "0.11.1"
 ifiction = { version = "0.2", default-features = false }
-# In flux: develop against the sibling checkout for now.
-loremaster-runtime = { path = "../loremaster/crates/loremaster-runtime" }
-loremaster-model = { path = "../loremaster/crates/loremaster-model" }
+# In flux and not yet released: pinned to a commit. story/ is written for this revision.
+loremaster-runtime = { git = "https://github.com/sunsided/loremaster", rev = "6113e866ddb7d8ac1af06eb2a317eb5673b6913f" }
+loremaster-model = { git = "https://github.com/sunsided/loremaster", rev = "6113e866ddb7d8ac1af06eb2a317eb5673b6913f" }
 serde_json = "1"
 bytemuck = { version = "1", features = ["derive"] }
 env_logger = "0.11"
 
 [build-dependencies]
 ifiction-build = "0.2"
-loremaster-project = { path = "../loremaster/crates/loremaster-project" }
+loremaster-project = { git = "https://github.com/sunsided/loremaster", rev = "6113e866ddb7d8ac1af06eb2a317eb5673b6913f" }
 serde_json = "1"
 
 [profile.dev.package."*"]

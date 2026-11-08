@@ -4,9 +4,7 @@
 use loremaster_project::{Severity, check_files, read_dir};
 use std::path::Path;
 
-/// shortcut: the story lives in the loremaster examples while the format is in flux; copy it here
-/// when the game starts to change it.
-const STORY: &str = "../loremaster/examples/lock-keeper-slice/demo";
+const STORY: &str = "story";
 
 fn main() {
     println!("cargo:rerun-if-changed={STORY}");

@@ -1,0 +1,45 @@
+# The accusation reads the three quests of the case notebook (design step 6).
+# It ends the game. Without a case, it is worse than the coroner's verdict.
+# The strong motive counts only while the player holds the pages; without
+# them, what the player read in them is a weak case.
+- id: accuse_marsh_with_pages
+  on: { verb: [accuse, marsh] }
+  when: means == proven and opportunity == proven and motive == strong and carried(pages)
+  instead: true
+  then:
+    - say: "You lay the pages and your notes on the table, and tell him of the dented windlass in the tool chest. Marsh reads them, and sits down."
+    - end: committed
+
+- id: accuse_marsh_weak
+  on: { verb: [accuse, marsh] }
+  when: means == proven and opportunity == proven and (motive == weak or (motive == strong and not carried(pages)))
+  instead: true
+  then:
+    - say: "You tell Marsh what you know. He asks for the pages, and you do not have them."
+    - end: charged
+
+- id: accuse_marsh_unproven
+  on: { verb: [accuse, marsh] }
+  when: not (means == proven and opportunity == proven and (motive == weak or motive == strong))
+  instead: true
+  then:
+    - say: ["Marsh smiles.", { says: "On what evidence, constable?", by: marsh }]
+    - end: released
+
+- id: accuse_crane
+  on: { verb: [accuse, crane] }
+  instead: true
+  then:
+    - end: wrong_man
+
+- id: accuse_hester
+  on: { verb: [accuse, hester] }
+  instead: true
+  then:
+    - end: wrong_man
+
+- id: accuse_bert
+  on: { verb: [accuse, bert] }
+  instead: true
+  then:
+    - end: wrong_man

@@ -1,0 +1,6 @@
+actor: crane
+steps:
+  - id: sleep
+    at: "01:30"
+    then:
+      - set: { crane_asleep: true }

@@ -1,0 +1,6 @@
+name: body
+aliases: [amos, reed, sheet, corpse]
+location: { room: amos_room }
+listed: false
+description:
+  - "Amos Reed, sixty, grey-haired. There is a wound above his left ear that the water did not make."

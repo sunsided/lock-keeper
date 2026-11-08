@@ -1,0 +1,7 @@
+name: gear housing
+aliases: [housing, gears, box]
+location: { room: lock_bottom }
+listed: false
+container: true
+description:
+  - "An iron box at the foot of the gate, bolted to the stone."

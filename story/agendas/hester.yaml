@@ -1,0 +1,10 @@
+# Hester Reed: she slips out to the barge, to Crane, and is with him at
+# midnight. An actor walks one room per turn, so she leaves the kitchen at
+# a quarter past eleven (three rooms to the barge) and goes up to her room
+# at half past twelve (five rooms back, so she is there near a quarter to
+# two). The design's 22:30 step to her room is left out: from there the
+# barge is five rooms away, too far to be on board at midnight.
+actor: hester
+steps:
+  - { id: barge, at: "23:15", place: barge_cabin }
+  - { id: back, at: "00:30", place: hester_room }

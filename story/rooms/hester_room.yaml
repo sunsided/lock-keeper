@@ -1,0 +1,6 @@
+name: Hester's Room
+position: [-1, -1]
+description:
+  - "A small room with a sloped ceiling and a window over the canal."
+exits:
+  - { direction: east, to: amos_room }

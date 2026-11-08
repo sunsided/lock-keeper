@@ -1,0 +1,8 @@
+name: Ivo Marsh
+aliases: [marsh, ivo, clerk, toll clerk]
+proper: true
+location: { room: parlour }
+presence:
+  - "Ivo Marsh, the toll clerk, is here."
+description:
+  - "A thin man in a good coat, here for the company's audit. His hands are never still."

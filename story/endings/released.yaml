@@ -1,0 +1,4 @@
+kind: loss
+rank: 4
+title: Released at dawn
+text: "You hold Marsh until the coroner comes. At dawn he walks away, and he knows what you know. You had {means == proven ? the weapon | no weapon}, {opportunity == proven ? the chance | no proof that he was out}, and {motive == open ? no motive | a motive}."

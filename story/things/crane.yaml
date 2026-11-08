@@ -1,0 +1,8 @@
+name: Silas Crane
+aliases: [crane, silas, master, bargee]
+proper: true
+location: { room: barge_cabin }
+presence:
+  - "Silas Crane, master of the *Kestrel*, is here{crane_asleep ? , asleep in his bunk | , with a mug of something}."
+description:
+  - "A big man with a short beard and a careful smile."

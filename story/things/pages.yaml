@@ -1,0 +1,6 @@
+name: oilcloth packet
+aliases: [packet, pages, ledger pages, oilcloth]
+location: { in: gear_housing }
+portable: true
+description:
+  - "Four pages cut from the toll ledger, dry inside the oilcloth: pages 41 to 44, in Amos's figures. The sums do not match the book."

@@ -1,0 +1,13 @@
+# The case notebook (design step 6) is the journal: one quest for each kind
+# of proof. The accusation reads their states.
+quest: true
+title: "Means: what struck him"
+start: open
+states:
+  - { name: open, journal: "Amos has a wound the water did not make. What struck him?" }
+  - { name: proven, journal: "The windlass from the tool chest: a dent, and a grey hair in it.", done: true }
+steps:
+  - from: open
+    on: { verb: [search, chest] }
+    to: proven
+    say: "You write it in your notebook: the weapon."

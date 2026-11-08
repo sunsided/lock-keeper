@@ -1,0 +1,37 @@
+# Too late for the pages (design: ashes.yaml): Marsh takes them from the
+# lock at one and burns them in the kitchen stove. The ash is a weaker
+# motive, and the case is weak.
+name: Charged, case weak
+steps:
+  - w
+  - { id: late_boots, do: examine boots, at: kitchen, facts: { opportunity: proven } }
+  - e
+  - s
+  - { id: late_weapon, do: search chest, at: lock_hut, facts: { means: proven } }
+  - n
+  - w
+  - { do: examine stove, see: "Nothing in it but coal.", facts: { motive: open } }
+  - wait
+  - wait
+  - wait
+  - wait
+  - wait
+  - wait
+  - { do: wait, see: "Far off, water roars at the lock." }
+  - wait
+  - wait
+  - { do: wait, see: "Marsh feeds an oilcloth packet into the stove." }
+  - id: ash
+    do: examine stove
+    at: kitchen
+    see: "half of the company's stamp"
+    needs: [late_boots, late_weapon]
+    facts: { motive: weak, stove.ash: true }
+    hints:
+      - "If the true proof is gone, the cottage may still show where it went."
+      - "Paper burns. Look in the stove after one."
+  - { id: accuse_weak, do: accuse marsh, needs: [ash], see: "Charged, case weak" }
+expect:
+  ending: charged
+  ended: true
+  see: "The ash in the stove is all that is left of them."

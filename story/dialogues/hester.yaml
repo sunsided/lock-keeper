@@ -1,0 +1,5 @@
+with: hester
+start: [meet]
+nodes:
+  meet:
+    say: [{ says: "I was in my room all evening. I heard nothing." }, { narrate: "She does not meet your eye." }]
