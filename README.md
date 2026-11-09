@@ -48,7 +48,7 @@ lock-keeper --ifiction   # the whole record
 
 The web build carries its own IFID, as a port to another format should: `build.rs` picks it by target, and `index.html` has it in the `ifiction:ifid` meta tag.
 
-loremaster is still in flux and not released, so the crates are pinned to a commit in `Cargo.toml`, and `story/` is the copy of the demo that matches it.
+The loremaster crates come from crates.io at 0.2, and `story/` is the copy of the demo that ships with that release.
 
 ## Status
 

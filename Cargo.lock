@@ -673,33 +673,33 @@ checksum = "d8b14ccef22fc6f5a8f4d7d768562a182c04ce9a3b3157b91390b52ddfdf1a76"
 
 [[package]]
 name = "dramaturge-authoring"
-version = "0.3.0-alpha.5"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eb509716945ec66a1e73d9683bfb1f0398070524f7880c34129ba59ce1e53fd0"
+checksum = "61243cc3a87ba5da40997c61b01bc28d2a812232415d72683783da3aec6f6e7c"
 dependencies = [
  "dramaturge-model",
 ]
 
 [[package]]
 name = "dramaturge-model"
-version = "0.3.0-alpha.5"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9e63bc7152561e17d78d690a73f193273497e092f0d3a600ad8f3068fe98e38e"
+checksum = "0fc50e7550b5aa25b81e1fcfeda5859cb79c645a8948f5d5d7d61455308ae454"
 
 [[package]]
 name = "dramaturge-runtime"
-version = "0.3.0-alpha.5"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e65867076143da348196cb6628bec5396cccfedbfaf824061fc61cc5f490adc7"
+checksum = "ddc4064817b3fcb104a036254794c663113593abbe53f03f89b4041ba443c728"
 dependencies = [
  "dramaturge-model",
 ]
 
 [[package]]
 name = "dramaturge-syntax"
-version = "0.3.0-alpha.5"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cf230354a7fa59f9435648e07a64415fce98d1981e98c79790ac17d54d384296"
+checksum = "3010f5c0d3f2a7384105797562750b598bf7c84e1cb56ea49a26dc792d3c376c"
 dependencies = [
  "dramaturge-model",
  "serde",
@@ -1582,8 +1582,9 @@ checksum = "5d15f86d12da44cd8d4ec3c73984537eb7f4cadcb9776a575a0a8a05ca11005c"
 
 [[package]]
 name = "loremaster-lang"
-version = "0.1.0"
-source = "git+https://github.com/sunsided/loremaster?rev=6113e866ddb7d8ac1af06eb2a317eb5673b6913f#6113e866ddb7d8ac1af06eb2a317eb5673b6913f"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ff0fb7135ef16979e049e72f2c2a326145716a8cc13e7ca1a606a6b375194c87"
 dependencies = [
  "dramaturge-model",
  "dramaturge-syntax",
@@ -1594,17 +1595,21 @@ dependencies = [
 
 [[package]]
 name = "loremaster-model"
-version = "0.1.0"
-source = "git+https://github.com/sunsided/loremaster?rev=6113e866ddb7d8ac1af06eb2a317eb5673b6913f#6113e866ddb7d8ac1af06eb2a317eb5673b6913f"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "00f80dae78afca0bf7f2bf6f713c32f70a9962b85f1986ec2df42605aacfab67"
 dependencies = [
  "dramaturge-syntax",
  "serde",
+ "serde_json",
+ "sha2",
 ]
 
 [[package]]
 name = "loremaster-project"
-version = "0.1.0"
-source = "git+https://github.com/sunsided/loremaster?rev=6113e866ddb7d8ac1af06eb2a317eb5673b6913f#6113e866ddb7d8ac1af06eb2a317eb5673b6913f"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e3b5d4c2c36e43858b8befb96e19a973390ca746e04fa110ffbd9c74e4d54f45"
 dependencies = [
  "dramaturge-authoring",
  "dramaturge-model",
@@ -1620,8 +1625,9 @@ dependencies = [
 
 [[package]]
 name = "loremaster-runtime"
-version = "0.1.0"
-source = "git+https://github.com/sunsided/loremaster?rev=6113e866ddb7d8ac1af06eb2a317eb5673b6913f#6113e866ddb7d8ac1af06eb2a317eb5673b6913f"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "508b194a5fca3eec62f84ba7252f44289ca41d95a12d1080eca0fdfb2404766c"
 dependencies = [
  "dramaturge-model",
  "dramaturge-runtime",
