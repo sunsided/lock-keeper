@@ -1,7 +1,7 @@
 [package]
 name = "lock-keeper"
 description = "A murder on a canal in 1923, written into a constable's notebook by lantern light."
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 license = "EUPL-1.2"
 authors = ["Markus Mayer"]
